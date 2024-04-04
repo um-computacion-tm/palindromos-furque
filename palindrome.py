@@ -2,13 +2,11 @@ import unittest
 
 
 def is_palindrome(mystring):
-    for indice in range(0, len(mystring)):
-        print(mystring[indice] + " --> " + mystring[-(indice +1)])
-        if mystring[indice] !=  mystring[-(indice+1)]:
-            print("no es")
-            return False
+    mystring=mystring.replace(" ","") 
+    for i in range(len(mystring)):
+        if mystring[i] != mystring[-(i+1)]:
+             return False
     return True
-    #return mystring[0] == mystring[-1]
 
 
 class TestPalindrome(unittest.TestCase):
@@ -64,4 +62,15 @@ class TestPalindrome(unittest.TestCase):
         resultado = is_palindrome('neuqueM')
         self.assertEqual(resultado, False)
 
-unittest.main()
+    def test_espacio01(self):
+        resultado = is_palindrome ('tes tea do od aet set')  
+        self.assertEqual(resultado, True)
+
+    def test_espacio02(self):
+        resultado = is_palindrome ('tes tea do dioquwndw')
+        self.assertEqual(resultado, False)
+
+
+if __name__ == '__main__':
+	unittest.main()        
+
