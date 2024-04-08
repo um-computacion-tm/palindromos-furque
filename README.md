@@ -1,1 +1,2 @@
 Furque Joaquin
+La funcion 'is_palindrome(mystring)' verifica si un texto ('mystring') es palindromo o no. La linea mystring=mystring.replace(" ","") elimina cualquier espacio del texto. Finalmente el 'for' verifica los caracteres del texto y la compara con su contraparte, si esta es simetrica te da como resultado 'True'. Si algun caracter no coincide entonces te devuelve 'False' indicando que NO es palindromo.
